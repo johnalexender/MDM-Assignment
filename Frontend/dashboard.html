@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MDM — Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">MDM</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"> <span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+          <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="items.html">Items</a></li>
+          <li class="nav-item"><a class="nav-link" href="admin.html" id="adminLink" style="display:none">Admin</a></li>
+        </ul>
+        <div class="d-flex align-items-center">
+          <span class="text-white me-3" id="welcomeUser">Hello</span>
+          <button id="btnLogout" class="btn btn-outline-light btn-sm">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-body">
+            <h4>Welcome to Master Data Management</h4>
+            <p>Use the navigation to manage brands, categories and items. Pagination set to 5 per page. Admins can manage all users.</p>
+
+            <div class="row gy-2">
+              <div class="col-sm-6">
+                <a class="btn btn-outline-primary w-100" href="brands.html">Manage Brands</a>
+              </div>
+              <div class="col-sm-6">
+                <a class="btn btn-outline-primary w-100" href="categories.html">Manage Categories</a>
+              </div>
+              <div class="col-sm-6">
+                <a class="btn btn-outline-primary w-100" href="items.html">Manage Items</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h6>User Info</h6>
+            <div id="userInfo"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>initDashboardUI();</script>
+</body>
+</html>
